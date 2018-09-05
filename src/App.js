@@ -9,19 +9,10 @@ class App extends Component {
     timerIDs: []
   }
 
+  componentDidMount () {
+    this.handleAddTimer()
+  }
 
-  //Your code here:
-
-
-
-
-
-
-
-
-
-  // No need to modify anything in render or the class methods below
-  // Unless, of course, you're curious about how it all works
   render() {
 
     return (
@@ -41,6 +32,7 @@ class App extends Component {
   renderTimers = () => this.state.timerIDs.map(id => {
     return <Timer key={id} id={id} removeTimer={this.removeTimer} />
   })
+
 
   // adds a random number for timer ID
   handleAddTimer = () => {
